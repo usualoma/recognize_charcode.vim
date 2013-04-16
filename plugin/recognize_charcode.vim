@@ -97,8 +97,8 @@ if has('autocmd')
 endif
 " 改行コードの自動認識
 set fileformats=unix,dos,mac
-" □とか○の文字があってもカーソル位置がずれないようにする
-if exists('&ambiwidth')
+" □ とか○の文字があってもカーソル位置がずれないようにする
+if exists('&ambiwidth') && ! (exists('g:recognize_charcode_skip_set_ambiwidth') && g:recognize_charcode_skip_set_ambiwidth)
   set ambiwidth=double
 endif
 
